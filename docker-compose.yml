@@ -6,8 +6,8 @@ services:
     ports:
       - 54322:5432
     environment:
-      - POSTGRES_USER=${DB_USER}
-      - POSTGRES_PASSWORD=${DB_PASS}
+      - POSTGRES_USER=thiyada
+      - POSTGRES_PASSWORD=thiyada17
     image : 'postgres:14.4'
     restart : 'unless-stopped'
 
