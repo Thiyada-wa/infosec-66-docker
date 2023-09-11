@@ -25,7 +25,7 @@ services:
   strapi :
     container_name: Thiyada-strapi
     ports:
-      - 1331:1337
+      - 1337:1337
     environment:
       - name=value
       - DATABASE_CLIENT=${DB_CLIENT}
