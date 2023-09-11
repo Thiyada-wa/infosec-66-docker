@@ -17,8 +17,8 @@ services:
       - 4433:443
       - 8080:80
     environment:
-      - PGADMIN_DEFAULT_EMAIL=thiyada-wa@rmutp.ac.th
-      - PGADMIN_DEFAULT_PASSWORD=Thiyada17
+      - PGADMIN_DEFAULT_EMAIL=${PG_EMAIL}
+      - PGADMIN_DEFAULT_PASSWORD=${PG_PASS}
     image: 'dpage/pgadmin4:latest'
     restart: 'unless-stopped'
 
@@ -28,12 +28,12 @@ services:
       - 1331:1337
     environment:
       - name=value
-      - DATABASE_CLIENT=postgres
-      - DATABASE_HOST=172.26.29.171
-      - DATABASE_PORT=54322
-      - DATABASE_NAME=Thiyada
-      - DATABASE_USERNAME=Thiyada
-      - DATABASE_PASSWORD=Thiyada17
-      - DATABASE_SSL=false
+      - DATABASE_CLIENT=${DB_CLIENT}
+      - DATABASE_HOST=${DB_HOST}
+      - DATABASE_PORT=${DB_PORT}
+      - DATABASE_NAME=${DB_NAME}
+      - DATABASE_USERNAME=${DB_USERNAME}
+      - DATABASE_PASSWORD=${DB_PASSWORD}
+      - DATABASE_SSL=${DB_SSL}
     image: 'naskio/strapi:latest'
     restart: 'unless-stopped'
